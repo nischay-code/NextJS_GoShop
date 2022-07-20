@@ -1,8 +1,7 @@
-import React from 'react';
-import Link from 'next/Link';
+import React from "react";
+import Link from "next/Link";
 
-
-export const NavBar = () => {
+export const NavBar = ({ cart }) => {
   return (
     <div>
       <header className="text-gray-600 body-font">
@@ -29,6 +28,9 @@ export const NavBar = () => {
             </Link>
             <Link href="/contact">
               <a className="mr-5 hover:text-gray-900">Contact Us</a>
+            </Link>
+            <Link href="/checkout">
+              <a className="mr-5 hover:text-gray-900">Cart({cart.length})</a>
             </Link>
           </nav>
           <button className="my-2 text-white bg-black border-0 py-1 md:py-2 px-2 md: focus:outline-none hover:bg-purple-600 rounded text-md">

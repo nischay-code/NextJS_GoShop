@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ const products = (props) => {
             {props.products.data.map((item) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <div className="xl:w-1/4 md:w-1/2 p-4">
+                <div key={item.attributes.slug} className="xl:w-1/4 md:w-1/2 p-4">
                   <div className="bg-gray-100 p-6 rounded-lg">
                     <img
                       className="h-96 rounded m-auto mb-8 "
@@ -31,13 +32,13 @@ const products = (props) => {
                       }
                       alt="content"
                     />
-                    <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                    <h3 className="tracking-widest text-black-500 text-xs font-medium title-font">
                       {item.attributes.category}
                     </h3>
                     <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
                       {item.attributes.title}
                     </h2>
-                    <div className="hidden bg-black bg-red-800 bg-purple-800 bg-green-800 bg-blue-800"></div>
+                    <div className="hidden bg-gray-500 bg-black bg-red-800 bg-purple-800 bg-green-800 bg-blue-800"></div>
                     <button
                       className={
                         "border-2 border-gray-300 ml-1 rounded-full w-6 h-6 focus:outline-none " +
@@ -49,7 +50,7 @@ const products = (props) => {
                     </p>
                     <Link href={`/product/${item.attributes.slug}`}>
                       
-                      <button className="my-2 text-white bg-black border-0 py-1 md:py-2 px-2 md: focus:outline-none hover:bg-purple-600 rounded text-md">
+                      <button className="my-2 text-white bg-black border-0 py-1 md:py-2 px-2 md: focus:outline-none hover:bg-gray-500 rounded text-md">
                         Buy Now
                       </button>
                     </Link>
