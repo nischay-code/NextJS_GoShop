@@ -366,7 +366,6 @@ const about = () => {
               </nav>
             </div>
           </div>
-          
         </div>
       </section>
     </div>

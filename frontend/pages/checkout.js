@@ -47,7 +47,7 @@ const checkout = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label
@@ -84,7 +84,6 @@ const checkout = () => {
                   Button
                 </button>
               </div>
-              
             </div>
           </div>
         </div>

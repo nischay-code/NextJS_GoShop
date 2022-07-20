@@ -165,17 +165,22 @@ const slug = ({ product, addToCart }) => {
                   <div className="hiddden bg-black"></div>
                   <button
                     onClick={() => {
-                      addToCart(slug, 1,product.attributes.price);
+                      addToCart(slug, 1, product.attributes.price);
                     }}
                     className="flex ml-auto text-white bg-black border-0 py-2 mx-2 px-2 focus:outline-none hover:bg-black-600 rounded"
                   >
                     Add to Cart
                   </button>
-                  <button onClick={()=>{router.push('/checkout')}} className="flex ml-auto text-white bg-black border-0 py-2 mx-2 px-2 focus:outline-none hover:bg-black-600 rounded">
+                  <button
+                    onClick={() => {
+                      router.push("/checkout");
+                    }}
+                    className="flex ml-auto text-white bg-black border-0 py-2 mx-2 px-2 focus:outline-none hover:bg-black-600 rounded"
+                  >
                     Checkout
                   </button>
                 </div>
-                <button  className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     fill="currentColor"
                     c="round"

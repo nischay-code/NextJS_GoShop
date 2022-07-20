@@ -22,7 +22,10 @@ const products = (props) => {
             {props.products.data.map((item) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <div key={item.attributes.slug} className="xl:w-1/4 md:w-1/2 p-4">
+                <div
+                  key={item.attributes.slug}
+                  className="xl:w-1/4 md:w-1/2 p-4"
+                >
                   <div className="bg-gray-100 p-6 rounded-lg">
                     <img
                       className="h-96 rounded m-auto mb-8 "
@@ -49,7 +52,6 @@ const products = (props) => {
                       {item.attributes.description}
                     </p>
                     <Link href={`/product/${item.attributes.slug}`}>
-                      
                       <button className="my-2 text-white bg-black border-0 py-1 md:py-2 px-2 md: focus:outline-none hover:bg-gray-500 rounded text-md">
                         Buy Now
                       </button>

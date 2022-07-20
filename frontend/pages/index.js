@@ -1,7 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Home() {
   return (
     <div className="container mx-auto px-4">
-      <img className=" object-center bg-yellow-300 w-[100vw] h-[70vh] " src="bg.jpg" alt="" />
+      <img
+        className=" object-center bg-yellow-300 w-[100vw] h-[70vh] "
+        src="bg.jpg"
+        alt=""
+      />
       <div className="hidden bg-black text-black"></div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
