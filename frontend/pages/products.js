@@ -41,7 +41,7 @@ const products = (props) => {
                     <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
                       {item.attributes.title}
                     </h2>
-                    <div className="hidden bg-gray-500 bg-black bg-red-800 bg-purple-800 bg-green-800 bg-blue-800"></div>
+                    <div className="hidden-bg-gray-500-bg-black-bg-red-800-bg-purple-800-bg-green-800-bg-blue-800"></div>
                     <button
                       className={
                         "border-2 border-gray-300 ml-1 rounded-full w-6 h-6 focus:outline-none " +
