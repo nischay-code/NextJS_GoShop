@@ -34,6 +34,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <NavBar key={reloadKey} cart={cart} />
       <Component
+        cart={cart}
         removeFromCart={removeFromCart}
         addToCart={addToCart}
         clearCart={clearCart}

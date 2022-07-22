@@ -2,21 +2,24 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-const slug = ({ product, addToCart }) => {
+const slug = ({ product, addToCart }, props) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   const { slug } = router.query;
+  console.log(product);
 
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <img
-              alt="ecommerce"
-              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
-            />
+            <div className="flex justify-center items-center w-full lg:w-auto">
+              <img
+                alt="ecommerce"
+                className=" rounded"
+                src={product.attributes.image.data.attributes.name}
+              />
+            </div>
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 MyShop
@@ -208,7 +211,9 @@ export async function getServerSideProps(context) {
       "Bearer e4bf7c7c4323cb9cd59c387ee3c3de90ea8bc9f757116ed42e6fdd66fe93b006dc5423d8f9ea6c5cb700fcd37ecce3d97f3c1aa6d24b506e1bc6b6faa3e83894210520582cf52b820afa90f21f89589997dbc3b697b348c61d9cbec71190544089d4089b8f7ffb128faddd1188f83de527b12ac42346abd5ea948c174d621840",
   };
   let a = await fetch(
-    "http://localhost:1337/api/products?filter[slug]=" + context.query.slug,
+    "http://localhost:1337/api/products?filters[slug]=" +
+      context.query.slug +
+      "&populate=*",
     {
       headers: headers,
     }
