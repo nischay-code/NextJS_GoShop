@@ -89,7 +89,7 @@ Explore the GO-Shop application, add products to the cart, and proceed to checko
 Contributing 🤝
 Feel free to contribute to the development of GO-Shop by opening issues and pull requests on the GitHub repository.
 
-## # Happy Coding! 💻😊🌟
+##  Happy Coding! 💻😊🌟
 
 
    
